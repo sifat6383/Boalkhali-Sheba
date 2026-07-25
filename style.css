@@ -1,0 +1,759 @@
+/* ================================
+   BOALKHALI SHEBA - MODERN UI
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #1769aa;
+    --primary-dark: #0d4f83;
+    --secondary: #0ea5a8;
+    --dark: #172033;
+    --text: #526071;
+    --light-bg: #f5f8fc;
+    --white: #ffffff;
+    --border: #e5ebf2;
+    --shadow: 0 20px 50px rgba(23, 105, 170, 0.12);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--white);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+    width: 100%;
+    padding: 18px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo span {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.logo strong {
+    display: block;
+    font-size: 18px;
+    color: var(--dark);
+}
+
+.logo small {
+    display: block;
+    font-size: 12px;
+    color: var(--primary);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--primary);
+}
+
+.login-btn {
+    padding: 10px 18px;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    color: var(--primary) !important;
+}
+
+.login-btn:hover {
+    background: var(--primary);
+    color: white !important;
+}
+
+.register-btn {
+    padding: 11px 20px;
+    background: var(--primary);
+    color: white !important;
+    border-radius: 8px;
+}
+
+.register-btn:hover {
+    background: var(--primary-dark);
+}
+
+.dark-btn,
+.menu-btn {
+    border: none;
+    cursor: pointer;
+    background: #eef5fc;
+    padding: 10px 13px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.menu-btn {
+    display: none;
+}
+
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero {
+    min-height: 680px;
+    padding: 100px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(23, 105, 170, 0.12), transparent 30%),
+        linear-gradient(135deg, #f6fbff, #ffffff);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 50px;
+    background: #eaf4ff;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+}
+
+.hero h1 {
+    font-size: 62px;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--primary);
+}
+
+.hero p {
+    max-width: 570px;
+    color: var(--text);
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 22px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.primary-btn {
+    background: var(--primary);
+    color: white;
+}
+
+.primary-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    border: 1px solid var(--border);
+    color: var(--dark);
+    background: white;
+}
+
+.secondary-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 45px;
+}
+
+.hero-stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-stats strong {
+    font-size: 22px;
+    color: var(--primary);
+}
+
+.hero-stats small {
+    color: var(--text);
+}
+
+
+/* ================================
+   HERO VISUAL
+================================ */
+
+.hero-visual {
+    width: 440px;
+    height: 440px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-circle {
+    width: 280px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #dff2ff, #ffffff);
+    box-shadow: 0 25px 60px rgba(23, 105, 170, 0.2);
+    font-size: 100px;
+}
+
+.floating-card {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    z-index: 2;
+}
+
+.floating-card > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.floating-card strong {
+    font-size: 14px;
+}
+
+.floating-card small {
+    color: var(--text);
+    font-size: 11px;
+}
+
+.card-one {
+    top: 45px;
+    left: 0;
+}
+
+.card-two {
+    right: 0;
+    bottom: 50px;
+}
+
+
+/* ================================
+   SERVICES
+================================ */
+
+.services-section {
+    padding: 110px 7%;
+    background: var(--light-bg);
+}
+
+.section-heading {
+    max-width: 650px;
+    margin-bottom: 55px;
+}
+
+.section-heading > span,
+.about-content > span {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 14px 0;
+}
+
+.section-heading h2 strong {
+    color: var(--primary);
+}
+
+.section-heading p {
+    color: var(--text);
+    font-size: 16px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    padding: 30px 25px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow);
+    border-color: #cfe5f7;
+}
+
+.service-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    font-size: 28px;
+    margin-bottom: 22px;
+}
+
+.doctor-icon {
+    background: #e5f3ff;
+}
+
+.hospital-icon {
+    background: #e9f8f0;
+}
+
+.ambulance-icon {
+    background: #fff1e6;
+}
+
+.emergency-icon {
+    background: #ffe9e9;
+}
+
+.service-card h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.service-card a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+/* ================================
+   ABOUT
+================================ */
+
+.about-section {
+    padding: 110px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+.about-content {
+    max-width: 650px;
+}
+
+.about-content h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin: 15px 0 20px;
+}
+
+.about-content h2 strong {
+    color: var(--primary);
+}
+
+.about-content p {
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.about-box {
+    min-width: 350px;
+    padding: 45px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #eaf4ff, #f8fcff);
+    text-align: center;
+}
+
+.about-box-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.about-box h3 {
+    font-size: 28px;
+}
+
+.about-box h3 span {
+    color: var(--primary);
+}
+
+.about-box p {
+    color: var(--text);
+    margin-top: 10px;
+}
+
+
+/* ================================
+   CTA
+================================ */
+
+.cta-section {
+    padding: 90px 7%;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+}
+
+.cta-section h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.cta-section h2 span {
+    color: #c9faff;
+}
+
+.cta-section p {
+    margin-bottom: 28px;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 14px 25px;
+    background: white;
+    color: var(--primary);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    padding: 45px 7% 20px;
+    background: var(--dark);
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 30px;
+}
+
+.footer-logo strong {
+    font-size: 20px;
+}
+
+.footer-logo p {
+    color: #aab4c3;
+    margin-top: 8px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a {
+    color: #c4ccd7;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    padding-top: 20px;
+    border-top: 1px solid #303b4e;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: #8e99a8;
+    font-size: 13px;
+}
+
+
+/* ================================
+   DARK MODE
+================================ */
+
+.dark-mode {
+    background: #0f172a;
+    color: white;
+}
+
+.dark-mode .navbar {
+    background: rgba(15, 23, 42, 0.95);
+}
+
+.dark-mode .logo strong,
+.dark-mode .nav-menu a,
+.dark-mode .secondary-btn {
+    color: white;
+}
+
+.dark-mode .hero {
+    background: #0f172a;
+}
+
+.dark-mode .hero p,
+.dark-mode .section-heading p,
+.dark-mode .service-card p,
+.dark-mode .about-content p {
+    color: #cbd5e1;
+}
+
+.dark-mode .services-section {
+    background: #111827;
+}
+
+.dark-mode .service-card {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+.dark-mode .about-section {
+    background: #0f172a;
+}
+
+.dark-mode .about-box {
+    background: #1e293b;
+}
+
+.dark-mode .secondary-btn {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+.dark-mode .floating-card {
+    background: #1e293b;
+    color: white;
+}
+
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 1000px) {
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-visual {
+        width: 360px;
+        height: 360px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 16px 5%;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 5%;
+        right: 5%;
+        padding: 20px;
+        flex-direction: column;
+        align-items: stretch;
+        background: white;
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu a {
+        padding: 10px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .dark-btn {
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    .hero {
+        padding: 70px 5%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        width: 320px;
+        height: 320px;
+    }
+
+    .main-circle {
+        width: 210px;
+        height: 210px;
+        font-size: 75px;
+    }
+
+    .floating-card {
+        padding: 10px;
+    }
+
+    .services-section,
+    .about-section {
+        padding: 75px 5%;
+    }
+
+    .section-heading h2,
+    .about-content h2 {
+        font-size: 34px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .about-box {
+        min-width: auto;
+    }
+
+    .footer-content,
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
